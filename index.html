@@ -5,44 +5,88 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>$BRC – Barong vs Rangda Coin</title>
   <style>
+    :root {
+      --bg: #fefefe;
+      --text: #111;
+      --accent: #c02942;
+      --card-bg: #ffffff;
+    }
+    body.dark {
+      --bg: #111;
+      --text: #fefefe;
+      --accent: #ff6b6b;
+      --card-bg: #1a1a1a;
+    }
+
     body {
       font-family: sans-serif;
       margin: 0;
       padding: 0;
       line-height: 1.6;
-      background-color: #fefefe;
-      color: #111;
+      background-color: var(--bg);
+      color: var(--text);
+      transition: background 0.3s, color 0.3s;
     }
+
     nav {
-      background: #111;
-      color: white;
+      background: var(--text);
+      color: var(--bg);
       padding: 1rem;
       text-align: center;
+      position: relative;
     }
+
     nav a {
-      color: white;
+      color: var(--bg);
       margin: 0 1rem;
       text-decoration: none;
     }
+
+    .toggle-theme {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: var(--bg);
+      color: var(--text);
+      border: 1px solid var(--text);
+      padding: 0.3rem 0.6rem;
+      cursor: pointer;
+      border-radius: 4px;
+      font-size: 0.8rem;
+    }
+
     section {
       padding: 2rem;
       max-width: 900px;
       margin: auto;
     }
+
     h2 {
-      color: #c02942;
+      color: var(--accent);
     }
-    table {
-      width: 100%;
-      border-collapse: collapse;
+
+    .roadmap-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 2fr 2fr;
+      gap: 1rem;
+      background: var(--card-bg);
+      color: inherit;
+      padding: 1rem;
+      border-radius: 8px;
       margin-top: 1rem;
-    }
-    table, th, td {
       border: 1px solid #ccc;
     }
-    th, td {
-      padding: 0.5rem;
-      text-align: left;
+
+    .roadmap-grid div {
+      padding: 0.3rem 0;
+    }
+
+    .roadmap-grid div:nth-child(-n+4) {
+      font-weight: bold;
+    }
+
+    ul {
+      padding-left: 1.2rem;
     }
   </style>
 </head>
@@ -55,6 +99,7 @@
     <a href="#token">Tokenomics</a>
     <a href="#design">Design</a>
     <a href="#vision">Vision</a>
+    <button class="toggle-theme" onclick="toggleTheme()">Toggle Theme</button>
   </nav>
 
   <section id="summary">
@@ -73,17 +118,42 @@
 
   <section id="roadmap">
     <h2>2. 30-Year Roadmap</h2>
-    <table>
-      <thead><tr><th>Phase</th><th>Timeline</th><th>Objectives</th><th>Focus</th></tr></thead>
-      <tbody>
-        <tr><td>Mythic Roots</td><td>2025–2030</td><td>Launch + digital identity missions</td><td>Storytelling, Cleanup, Education</td></tr>
-        <tr><td>Sovereign Dawn</td><td>2030–2035</td><td>App-chain + civic grants</td><td>Grants for civic work</td></tr>
-        <tr><td>Cosmic Weave</td><td>2035–2040</td><td>IRL Pilots + ZK Proofs</td><td>Physical deployment</td></tr>
-        <tr><td>Protocol Sovereignty</td><td>2040–2045</td><td>Self-amending chain</td><td>Infrastructure scaling</td></tr>
-        <tr><td>Mythos Unbound</td><td>2045–2050</td><td>Cross-chain integration</td><td>Global civic sync</td></tr>
-        <tr><td>Eternal Balance</td><td>2050–2055</td><td>Autonomous trust protocol</td><td>Long-term legacy</td></tr>
-      </tbody>
-    </table>
+    <div class="roadmap-grid">
+      <div>Phase</div>
+      <div>Timeline</div>
+      <div>Key Objectives</div>
+      <div>Focus Area</div>
+
+      <div>🌱 Mythic Roots</div>
+      <div>2025–2030</div>
+      <div>ERC-20 token launch<br>Dual-token mechanics<br>Digital missions</div>
+      <div>Cleanup initiatives, education</div>
+
+      <div>🔗 Sovereign Dawn</div>
+      <div>2030–2035</div>
+      <div>Migration to Cosmos chain<br>Mission logic modules<br>Validator onboarding</div>
+      <div>Decentralize charity via DAOs</div>
+
+      <div>✨ Cosmic Weave</div>
+      <div>2035–2040</div>
+      <div>AI-driven lore engine<br>ZK proof rituals<br>Interchain NFT bridges</div>
+      <div>Impact-based NFT evolution</div>
+
+      <div>🏛 Protocol Sovereign</div>
+      <div>2040–2045</div>
+      <div>Self-amending chain<br>Regenerative validators</div>
+      <div>Fund IRL missions via governance</div>
+
+      <div>🧬 Mythos Unbound</div>
+      <div>2045–2050</div>
+      <div>Decentralized AI mythkeepers<br>Cross-chain governance</div>
+      <div>Expanded ecosystem-wide impact</div>
+
+      <div>✅ Eternal Balance</div>
+      <div>2050–2055</div>
+      <div>Fully autonomous protocol<br>Quantum-resistant layers</div>
+      <div>Long-term cleanup and education endowment</div>
+    </div>
   </section>
 
   <section id="tech">
@@ -123,5 +193,11 @@
       $BRC becomes a decentralized civic protocol focused on measurable impact, not speculation. Barong and Rangda evolve as symbolic identities to inspire collective cleanups, empowerment, and digital coordination.
     </p>
   </section>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle("dark");
+    }
+  </script>
 </body>
 </html>

@@ -1,36 +1,203 @@
-<div class="roadmap-grid">
-  <div>Phase</div>
-  <div>Timeline</div>
-  <div>Key Objectives</div>
-  <div>Focus Area</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>$BRC – Barong vs Rangda Coin</title>
+  <style>
+    :root {
+      --bg: #fefefe;
+      --text: #111;
+      --accent: #c02942;
+      --card-bg: #ffffff;
+    }
+    body.dark {
+      --bg: #111;
+      --text: #fefefe;
+      --accent: #ff6b6b;
+      --card-bg: #1a1a1a;
+    }
 
-  <div>◆ Mythic Roots</div>
-  <div>2025–2030</div>
-  <div>ERC-20 token launch<br>Dual-token mechanics<br>Digital missions</div>
-  <div>Cleanup initiatives, education</div>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: var(--bg);
+      color: var(--text);
+      transition: background 0.3s, color 0.3s;
+    }
 
-  <div>▣ Sovereign Dawn</div>
-  <div>2030–2035</div>
-  <div>Migration to Cosmos chain<br>Mission logic modules<br>Validator onboarding</div>
-  <div>Decentralize charity via DAOs</div>
+    nav {
+      background: var(--text);
+      color: var(--bg);
+      padding: 1rem;
+      text-align: center;
+      position: relative;
+    }
 
-  <div>✦ Cosmic Weave</div>
-  <div>2035–2040</div>
-  <div>AI-driven lore engine<br>ZK proof rituals<br>Interchain NFT bridges</div>
-  <div>Impact-based NFT evolution</div>
+    nav a {
+      color: var(--bg);
+      margin: 0 1rem;
+      text-decoration: none;
+    }
 
-  <div>☗ Protocol Sovereign</div>
-  <div>2040–2045</div>
-  <div>Self-amending chain<br>Regenerative validators</div>
-  <div>Fund IRL missions via governance</div>
+    .toggle-theme {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: var(--bg);
+      color: var(--text);
+      border: 1px solid var(--text);
+      padding: 0.3rem 0.6rem;
+      cursor: pointer;
+      border-radius: 4px;
+      font-size: 0.8rem;
+    }
 
-  <div>➺ Mythos Unbound</div>
-  <div>2045–2050</div>
-  <div>Decentralized AI mythkeepers<br>Cross-chain governance</div>
-  <div>Expanded ecosystem-wide impact</div>
+    section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
 
-  <div>✧ Eternal Balance</div>
-  <div>2050–2055</div>
-  <div>Fully autonomous protocol<br>Quantum-resistant layers</div>
-  <div>Long-term cleanup and education endowment</div>
-</div>
+    h2 {
+      color: var(--accent);
+    }
+
+    .roadmap-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 2fr 2fr;
+      gap: 1rem;
+      background: var(--card-bg);
+      color: inherit;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+      border: 1px solid #ccc;
+    }
+
+    .roadmap-grid div {
+      padding: 0.3rem 0;
+    }
+
+    .roadmap-grid div:nth-child(-n+4) {
+      font-weight: bold;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#summary">Summary</a>
+    <a href="#intro">Intro</a>
+    <a href="#roadmap">Roadmap</a>
+    <a href="#tech">Tech</a>
+    <a href="#token">Tokenomics</a>
+    <a href="#design">Design</a>
+    <a href="#vision">Vision</a>
+    <button class="toggle-theme" onclick="toggleTheme()">Toggle Theme</button>
+  </nav>
+
+  <section id="summary">
+    <h2>Executive Summary</h2>
+    <p>
+      $BRC (Barong vs Rangda Coin) is a 30-year digital initiative using mythic imagery from Balinese art to create a dual-token civic ecosystem. Barong represents cleanliness and environmental care; Rangda represents empowerment through education. All experiences are digital for the first 10 years.
+    </p>
+  </section>
+
+  <section id="intro">
+    <h2>1. Myth-Inspired Infrastructure</h2>
+    <p>
+      Barong and Rangda are reimagined as civic identities: Barong leads waste cleanup missions, Rangda leads education and empowerment campaigns. Everything is on-chain, transparent, and built around digital missions and engagement.
+    </p>
+  </section>
+
+  <section id="roadmap">
+    <h2>2. 30-Year Roadmap</h2>
+    <div class="roadmap-grid">
+      <div>Phase</div>
+      <div>Timeline</div>
+      <div>Key Objectives</div>
+      <div>Focus Area</div>
+
+      <div>◆ Mythic Roots</div>
+      <div>2025–2030</div>
+      <div>ERC-20 token launch<br>Dual-token mechanics<br>Digital missions</div>
+      <div>Cleanup initiatives, education</div>
+
+      <div>▣ Sovereign Dawn</div>
+      <div>2030–2035</div>
+      <div>Migration to Cosmos chain<br>Mission logic modules<br>Validator onboarding</div>
+      <div>Decentralize charity via DAOs</div>
+
+      <div>✦ Cosmic Weave</div>
+      <div>2035–2040</div>
+      <div>AI-driven lore engine<br>ZK proof rituals<br>Interchain NFT bridges</div>
+      <div>Impact-based NFT evolution</div>
+
+      <div>☗ Protocol Sovereign</div>
+      <div>2040–2045</div>
+      <div>Self-amending chain<br>Regenerative validators</div>
+      <div>Fund IRL missions via governance</div>
+
+      <div>➺ Mythos Unbound</div>
+      <div>2045–2050</div>
+      <div>Decentralized AI mythkeepers<br>Cross-chain governance</div>
+      <div>Expanded ecosystem-wide impact</div>
+
+      <div>✧ Eternal Balance</div>
+      <div>2050–2055</div>
+      <div>Fully autonomous protocol<br>Quantum-resistant layers</div>
+      <div>Long-term cleanup and education endowment</div>
+    </div>
+  </section>
+
+  <section id="tech">
+    <h2>3. Technical Architecture</h2>
+    <ul>
+      <li>Phase 1: Ethereum L2, ERC-1155 relics, digital missions</li>
+      <li>Phase 2: Cosmos SDK, mission VM, proof-of-impact tokens</li>
+      <li>Phase 3: ZK-verification, AI lore bots</li>
+      <li>Phase 4–6: Modular consensus, interchain mesh, civic oracle layers</li>
+    </ul>
+  </section>
+
+  <section id="token">
+    <h2>4. Token Lifecycle</h2>
+    <p><strong>$BRC (Utility Token):</strong> Digital mission engine, relic minting, validator rewards.</p>
+    <p><strong>$RANGDA (Governance Token):</strong> Earned via social impact, grants proposal and voting.</p>
+    <ul>
+      <li>20% reserved for contributors (vested over 30 years)</li>
+      <li>5% of fees fund cleanup and education</li>
+      <li>Impact-based token burns and deflation</li>
+    </ul>
+  </section>
+
+  <section id="design">
+    <h2>5. Digital Impact Systems</h2>
+    <ul>
+      <li>Mission validation via pledges and digital tasks</li>
+      <li>Grants DAO for Bali-focused impact work</li>
+      <li>Soulbound NFTs for civic progress</li>
+      <li>Open source modules for other chains</li>
+    </ul>
+  </section>
+
+  <section id="vision">
+    <h2>6. Long-Term Vision</h2>
+    <p>
+      $BRC becomes a decentralized civic protocol focused on measurable impact, not speculation. Barong and Rangda evolve as symbolic identities to inspire collective cleanups, empowerment, and digital coordination.
+    </p>
+  </section>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle("dark");
+    }
+  </script>
+</body>
+</html>
